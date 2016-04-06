@@ -1,0 +1,14 @@
+[Unit]
+Description=SenseHAT Data Collect and Send service
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/local/bin/sensecollector
+Type=simple
+
+User=pi
+Group=pi
+Restart=always
+
+[Install]
+WantedBy=default.target
