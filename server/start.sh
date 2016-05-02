@@ -3,7 +3,6 @@
 # Start the API endpoint that
 # the collector talks to.
 docker run -d \
-  -p 9091:9091 \
   --name pushgateway \
   prom/pushgateway
 
@@ -11,8 +10,8 @@ docker run -d \
 docker run -d \
   --link pushgateway \
   --name prometheus \
-  -v /usr/local/prometheus:/prometheus-data \
-  prom/prometheus -config.file=/prometheus-data/prometheus.yml
+  -v /usr/local/prometheus:/prometheus \
+  prom/prometheus -config.file=/prometheus/prometheus.yml
 
 # Start Grafana for fancy graphing
 docker run -d \
