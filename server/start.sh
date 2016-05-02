@@ -4,6 +4,7 @@
 # the collector talks to.
 docker run -d \
   --name pushgateway \
+  -p 9091:9091 \
   prom/pushgateway
 
 # Start the database
