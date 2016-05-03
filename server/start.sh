@@ -26,4 +26,5 @@ docker run -d \
   --link prometheus \
   --restart=always \
   -p 3000:3000 \
+  -v /var/lib/grafana:/var/lib/grafana \
   grafana/grafana
