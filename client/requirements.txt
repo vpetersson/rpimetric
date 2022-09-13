@@ -1,2 +1,2 @@
 sh==1.11
-requests==2.4.3
+requests==2.20.0
